@@ -1,0 +1,191 @@
+/* Portal login + forgot-password form styles */
+#LoginNew {
+    .cCenterPanel {
+        min-width: 30rem;
+        max-width: 45rem;
+        box-shadow: 0 1.5rem 4rem rgba($color: $color-dark, $alpha: .15);
+        padding: 3rem 5rem 5rem 5rem;
+        border-radius: .8rem;
+        background: $color-white;
+
+        .ui-widget {
+            .salesforceIdentityCommunityLogo2 {
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    div[id="cls_self_register_container"],
+    div[id="cls_forgotpassword_container"],
+    div[id="cls_resetpassword_container"],
+    div[id="cls_login_container"] {
+        position: relative;
+
+        div[id^="sfdc"][id$="container"].sfdc {
+            margin-bottom: 2rem !important;
+
+            .slds-icon_container {
+                position: absolute;
+                transform: scale(1.5);
+                left: 1.7rem;
+            }
+
+            input {
+                padding: 1.5rem !important;
+                padding-left: 4rem !important;
+                margin-left: 0 !important;
+                color: $color-primary;
+                font-size: $default-font-size;
+                line-height: normal !important;
+                border: .1rem solid rgba($color: $color-dark, $alpha: .2) !important;
+                border-radius: .5rem;
+                margin-top: .3rem !important;
+                letter-spacing: .05rem;
+                transition: .2s linear all;
+
+                @include respond-to(sm-device) {
+                    font-size: 2rem;
+                }
+
+                &::placeholder {
+                    color: rgba($color: $color-dark, $alpha: .5);
+                }
+
+                &:hover,
+                &:focus {
+                    box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .05);
+                    border: .1rem solid #{$color-primary} !important;
+                    outline: none !important;
+                }
+            }
+        }
+
+        div[id="sfdc_forgot"].sfdc {
+            a {
+                &,
+                &:link,
+                &:visited {
+                    color: $color-secondary !important;
+                    text-align: center;
+                    display: block;
+                    margin-top: 1.5rem;
+                    font: 700 #{$default-font-size} #{$default-font-family};
+                }
+                
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $color-secondary !important;
+                }
+            }
+        }
+    }
+}
+
+/* Portal reset password form styles */
+div[data-style-actor-name="resetPasswordActor"] {
+    &.actor-wrapper {
+        min-width: 30rem;
+        max-width: 45rem;
+        box-shadow: 0 1.5rem 4rem rgba($color: $color-dark, $alpha: .15);
+        padding: 3rem 5rem 5rem 5rem !important;
+        border-radius: .8rem;
+        background: $color-white;
+
+        @include position-with-transform(
+                                $position: relative,
+                                $top: 50%,
+                                $left: 50%,
+                                $transform: translate(-50%, -50%)
+                            );
+
+        .detail-view {
+            box-shadow: none !important;
+            padding: 8.5rem .75rem 0 .75rem;
+
+            &,
+            .entries,
+            .record-container {
+                border: none !important;
+            }
+
+            img {
+                width: 30.662%;
+            }
+
+            .subtitle {
+                width: 100%;
+                top: 10rem;
+            }
+
+            .record-content {
+                margin-top: 11rem;
+                margin-bottom: 1.5rem;
+                padding: 0;
+
+                div[data-style-section-name="resetPasswordSection"] {
+
+                    div[data-style-id="field"] {
+                        padding-right: 0 !important;
+                        margin-bottom: 0 !important;
+
+                        .field-content {
+                            margin-bottom: 2rem;
+                        }
+
+                        .flabel {
+                            height: 2.6rem;
+                            transform: scale(1.5);
+                            display: inline-block;
+                            position: absolute;
+                            z-index: 1;
+                            left: 1.7rem;
+                            top: 1.55rem; 
+                            
+                            [data-style-id="field-label"] {
+                                font-size: 1.2rem;
+                            }
+
+                            @include respond-to(sm-device) {
+                                top: 1.02rem;
+                            }
+                        }
+                    }
+
+                    .form-control {
+                        font: #{$default-font-size}/normal #{$default-font-family} !important;
+                        border: .1rem solid rgba($color: $color-dark, $alpha: .2) !important;
+                        padding: 1.5rem !important;
+                        padding-left: 4rem !important;
+                        height: auto !important;
+                        margin-top: .3rem !important;
+                        box-shadow: none;
+                        min-height: calc(2.125rem + 2px);
+                        color: $color-primary;
+                        border-radius: .5rem;
+                        letter-spacing: .05rem;
+                        transition: .2s linear all;
+
+                        @include respond-to(sm-device) {
+                            font-size: 2rem;
+                        }
+        
+                        &::placeholder {
+                            color: rgba($color: $color-dark, $alpha: .5);
+                        }
+        
+                        &:hover,
+                        &:focus {
+                            box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .05);
+                            border: .1rem solid #{$color-primary} !important;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+div[id="cls_self_register_container"],
+div[id="cls_forgotpassword_container"],
+div[id="cls_resetpassword_container"],
+div[id="cls_login_container"] {
+
+    button.sfdc_button {
+        font: 500 2rem #{$default-font-family} !important;
+        background-color: $color-primary !important;
+        border-color: darken($color: $color-primary, $amount: 9) !important;
+        padding: 1.5rem !important;
+        border-radius: .5rem !important;
+        // text-transform: uppercase;
+        transition: .2s linear box-shadow;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .2);
+        }
+    }
+}
+
+div[pageid="PortalResetPassword"] {
+    div[data-style-actor-name="resetPasswordActor"] {
+
+        .component-actions-bottom {
+            margin-bottom: .5rem;
+            height: 5.5rem;
+
+            * {
+                width: 100%;
+                text-align: center;
+            }
+
+            div[data-style-id="action-wrapper"] {
+                margin: 1.5rem 0 .5rem 0 !important;
+                display: inline !important;
+
+                .action {
+                    font: 500 2rem #{$default-font-family};
+                    background-color: $color-primary;
+                    border-color: darken($color: $color-primary, $amount: 9);
+                    padding: 1.5rem;
+                    border-radius: .5rem;
+                    transition: .2s linear box-shadow;
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .2);
+                    }
+                }
+            }
+        }
+    }
+}

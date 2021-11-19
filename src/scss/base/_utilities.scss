@@ -1,0 +1,81 @@
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-color-primary {
+    color: $color-primary !important;
+}
+
+.u-color-secondary {
+    color: $color-secondary !important;
+}
+
+.u-color-tertiary {
+    color: $color-tertiary !important;
+}
+
+.u-color-light {
+    color: $color-light !important;
+}
+
+.u-color-dark {
+    color: $color-dark !important;
+}
+
+.u-color-white {
+    color: $color-white !important;
+}
+
+.u-color-black {
+    color: $color-black !important;
+}
+
+.u-text-bold {
+    font-weight: 700 !important;
+}
+
+/* Margins */
+@each $spacing-key, $spacing-value in $spacings {
+    @each $direction-key, $direction-value in $directions {
+        .u-m#{$direction-key}-#{$spacing-key} {
+            margin-#{$direction-value}: $spacing-value !important;
+        }
+    }
+
+    .u-mx-#{$spacing-key} {
+        margin-left: $spacing-value !important;
+        margin-right: $spacing-value !important;
+    }
+
+    .u-my-#{$spacing-key} {
+        margin-top: $spacing-value !important;
+        margin-bottom: $spacing-value !important;
+    }
+
+    .u-m-#{$spacing-key} {
+        margin: $spacing-value !important;
+    }
+}
+
+/* Paddings */
+@each $spacing-key, $spacing-value in $spacings {
+    @each $direction-key, $direction-value in $directions {
+        .u-p#{$direction-key}-#{$spacing-key} {
+            padding-#{$direction-value}: $spacing-value !important;
+        }
+    }
+
+    .u-px-#{$spacing-key} {
+        padding-left: $spacing-value !important;
+        padding-right: $spacing-value !important;
+    }
+
+    .u-py-#{$spacing-key} {
+        padding-top: $spacing-value !important;
+        padding-bottom: $spacing-value !important;
+    }
+
+    .u-p-#{$spacing-key} {
+        padding: $spacing-value !important;
+    }
+}

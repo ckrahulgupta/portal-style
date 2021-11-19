@@ -1,0 +1,34 @@
+/* Header styles */
+div[pageid="PortalResetPassword"] {
+    div[data-style-actor-name="ClsAppLayoutOneHeader"] {
+        &.actor-wrapper {
+            display: none;
+        }
+    }
+}
+
+[data-style-actor-name="ClsAppLayoutOneHeader"] {
+
+    & > & {
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+    }
+
+    &.actor-wrapper {
+        box-shadow: 0 0 1rem .3rem rgba($color: $color-dark, $alpha: .15);
+        z-index: 1;
+        padding: 0 5rem !important;
+
+        [data-style-id="division"] {
+            overflow: visible !important;
+        }
+    }
+    
+    .static-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+

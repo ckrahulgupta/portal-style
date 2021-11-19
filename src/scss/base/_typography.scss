@@ -1,0 +1,35 @@
+body, 
+body [data-style-id="app"] {
+    font: 400 #{$default-font-size}/1.6 #{$default-font-family};
+    color: #{$default-font-color};
+}
+
+.heading {
+    font-weight: 700 !important;
+    line-height: 1.6 !important;
+    font-family: $default-font-family !important;
+
+    &-secondary {
+        font-size: 2.4rem !important;
+    }
+
+    &--underline-center::after {
+        content: '';
+        display: block;
+        border-bottom: .2rem solid $color-tertiary;
+        margin: 0 14rem;
+    }
+}
+
+.link {
+    &,
+    &:visited,
+    &:link,
+    &:hover,
+    &:focus, 
+    &:active {
+        font-size: $default-font-size;
+        display: block;
+        text-decoration: none !important;
+    }
+}

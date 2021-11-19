@@ -1,0 +1,70 @@
+@mixin clearix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin position(
+            $position: absolute,
+            $top: 0,
+            $left: auto,
+            $bottom: auto,
+            $right: auto
+        ) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin position-with-transform(
+            $position: absolute,
+            $top: 0,
+            $left: auto,
+            $bottom: auto,
+            $right: auto,
+            $transform: none
+        ) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    transform: $transform;
+}
+
+@mixin respond-to($media) {
+    @if $media == xs-sm-device{
+        @media only screen and (max-width: $break-xs-sm) {
+            @content;
+        }
+    }
+    @else if $media == sm-device {
+        @media only screen and (max-width: $break-sm) {
+            @content;
+        }
+    }
+    @else if $media == md-device {
+        @media only screen and (max-width: $break-md) {
+            @content;
+        }
+    }
+    @else if $media == xs-md-device {
+        @media only screen and (max-width: $break-xs-md) {
+            @content;
+        }
+    }
+    @else if $media == lg-device {
+        @media only screen and (max-width: $break-lg) {
+            @content;
+        }
+    }
+    @else if $media == xs-lg-device {
+        @media only screen and (max-width: $break-xs-lg) {
+            @content;
+        }
+    }
+}

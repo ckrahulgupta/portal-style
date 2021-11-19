@@ -1,0 +1,37 @@
+// Colors
+$color-primary: #61734b;
+$color-secondary: #ac754b;
+$color-tertiary: #efceb8;
+$color-light: #fef9f8;
+$color-dark: #454644;
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Fonts
+$default-font-family: "Roboto Condensed", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default-font-size: 1.6rem;
+$default-font-color: $color-dark;
+$text-bold: 700;
+
+// Spacing
+$spacings: (
+        "sm": 2rem,
+        "md": 4rem,
+        "lg": 8rem
+    );
+
+// Directions
+$directions: (
+        "t": "top",
+        "l": "left",
+        "b": "bottom",
+        "r": "right"
+    );
+
+// Breakpoints
+$break-xs-sm: 25em; // 400px
+$break-sm: 37.5em;  // 600px
+$break-md: 48em;    // 768px
+$break-xs-md: 57.5em;   // 920px
+$break-lg: 64em;    // 1024px
+$break-xs-lg: 80.125em; // 1282px

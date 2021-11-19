@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*[navigate] {
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5% !important;
+
+    @include respond-to(sm-device) {
+        /* Scale font to 6px */
+        font-size: 46% !important; 
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+html,
+body,
+.siteforcePrmBody,
+.siteforceContentArea,
+.contentRegion,
+[data-region-name="content"],
+.ui-widget,
+iframe,
+.cCenterPanel,
+.forceCommunitySection,
+cb-section_row,
+.siteforceStarterBody {
+    height:100% !important;
+}
+
+::selection {
+    background-color: $color-primary !important;
+    color: $color-white !important;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}

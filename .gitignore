@@ -1,0 +1,7 @@
+# exclude npm dependencies
+node_modules/
+
+# exclude package-lock.json
+-lock.json
+
+
