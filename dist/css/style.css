@@ -694,9 +694,13 @@ div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"
     height: 100%;
 }
 
+[data-style-actor-name="authBtnActor"].actor-wrapper .static-content {
+    top: -1rem;
+}
+
 [data-style-actor-name="authBtnActor"].actor-wrapper .user-actions {
     position: relative;
-    top: -1.5rem;
+    top: -.5rem;
 }
 
 [data-style-actor-name="authBtnActor"].actor-wrapper .user-actions a {

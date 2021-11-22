@@ -5,9 +5,13 @@
         height: 100%;
     }
 
+    .static-content {
+        top: -1rem;
+    }
+
     .user-actions {
         position: relative;
-        top: -1.5rem;
+        top: -.5rem;
 
         a {
             text-decoration: none;
