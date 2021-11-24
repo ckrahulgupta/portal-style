@@ -28,20 +28,33 @@ body {
     width: 100%;
 }
 
-html,
-body,
-.siteforcePrmBody,
-.siteforceContentArea,
-.contentRegion,
-[data-region-name="content"],
-.ui-widget,
-iframe,
-.cCenterPanel,
-.forceCommunitySection,
-cb-section_row,
-.siteforceStarterBody {
-    height:100% !important;
+.appFlexVertical,
+.appFlexHorizantal {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    // position: relative !important;
 }
+
+// .actor-wrapper {
+//     padding-left: 2.5rem;
+//     padding-right: 2.5rem;
+// }
+
+// html,
+// body,
+// .siteforcePrmBody,
+// .siteforceContentArea,
+// .contentRegion,
+// [data-region-name="content"],
+// .ui-widget,
+// iframe,
+// .cCenterPanel,
+// .forceCommunitySection,
+// .cb-section_row,
+// .siteforceStarterBody {
+//     height:100% !important;
+// }
 
 ::selection {
     background-color: $color-primary !important;
@@ -51,4 +64,11 @@ cb-section_row,
 a {
     cursor: pointer;
     text-decoration: none;
+}
+
+.salesforceIdentityLoginBody2 {
+    .ui-widget {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
 }

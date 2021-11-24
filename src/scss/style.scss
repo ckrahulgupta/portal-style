@@ -32,7 +32,7 @@
 
 /* 
 * Form
-* ----------
+* ----
 */
 @import "components/form";
 
@@ -43,16 +43,22 @@
 @import "components/button";
 
 /* 
-* Dropdown
-* --------
+* Statistics
+* ----------
 */
-@import "components/dropdown";
+@import "components/statistics";
 
 /* 
 * Header
 * ------
 */
 @import "layout/header";
+
+/* 
+* Flex
+* ----
+*/
+@import "layout/flex";
 
 /* 
 * Login

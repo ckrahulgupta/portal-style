@@ -1,7 +1,7 @@
 body, 
 body [data-style-id="app"] {
     font: 400 #{$default-font-size}/1.6 #{$default-font-family};
-    color: #{$default-font-color};
+    color: $default-font-color;
 }
 
 .heading {
@@ -32,4 +32,4 @@ body [data-style-id="app"] {
         display: block;
         text-decoration: none !important;
     }
-}
+}   

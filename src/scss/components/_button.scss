@@ -9,7 +9,6 @@ div[id="cls_login_container"] {
         border-color: darken($color: $color-primary, $amount: 9) !important;
         padding: 1.5rem !important;
         border-radius: .5rem !important;
-        // text-transform: uppercase;
         transition: .2s linear box-shadow;
 
         &:hover,
@@ -19,33 +18,39 @@ div[id="cls_login_container"] {
     }
 }
 
-div[pageid="PortalResetPassword"] {
-    div[data-style-actor-name="resetPasswordActor"] {
+div[pageid="portal_grower_reset_password"] {
+    div[data-style-actor-name="growerResetPasswordForm"] {
 
-        .component-actions-bottom {
-            margin-bottom: .5rem;
-            height: 5.5rem;
+        .toolbar-at-bottom {
+            min-height: auto !important;
+            margin-bottom: 1rem;
 
-            * {
+            button[data-style-action-name="resetPassword"] {
+                font: 500 2rem #{$default-font-family};
+                background-color: $color-primary;
+                border: .1rem solid darken($color: $color-primary, $amount: 9) !important;
+                padding: 1.5rem;
+                border-radius: .5rem;
+                transition: .2s linear box-shadow;
+                box-shadow: none;
                 width: 100%;
-                text-align: center;
-            }
+                text-transform: capitalize;
+    
+                &:hover,
+                &:focus {
+                    box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .2) !important;
+                }
 
-            div[data-style-id="action-wrapper"] {
-                margin: 1.5rem 0 .5rem 0 !important;
-                display: inline !important;
+                .MuiButton-label {
+                    & > span {
+                        display: flex;
+                        align-items: center;
+                    }
 
-                .action {
-                    font: 500 2rem #{$default-font-family};
-                    background-color: $color-primary;
-                    border-color: darken($color: $color-primary, $amount: 9);
-                    padding: 1.5rem;
-                    border-radius: .5rem;
-                    transition: .2s linear box-shadow;
-
-                    &:hover,
-                    &:focus {
-                        box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .2);
+                    .material-icons {
+                        font-size: inherit !important;
+                        line-height: auto !important;
+                        margin-right: .5rem;
                     }
                 }
             }

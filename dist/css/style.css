@@ -40,18 +40,10 @@ body {
     width: 100%;
 }
 
-html,
-body,
-.siteforcePrmBody,
-.siteforceContentArea,
-.contentRegion,
-[data-region-name="content"],
-.ui-widget,
-iframe,
-.cCenterPanel,
-.forceCommunitySection,
-cb-section_row,
-.siteforceStarterBody {
+.appFlexVertical,
+.appFlexHorizantal {
+    margin: 0 !important;
+    width: 100% !important;
     height: 100% !important;
 }
 
@@ -70,6 +62,11 @@ a {
     text-decoration: none;
 }
 
+.salesforceIdentityLoginBody2 .ui-widget {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
 /* 
 * Utilities
 * ---------
@@ -78,6 +75,40 @@ a {
     text-align: center !important;
 }
 
+/* Text colors */
+.u-bg-primary {
+    background-color: #61734b !important;
+}
+
+.u-bg-secondary {
+    background-color: #ac754b !important;
+}
+
+.u-bg-tertiary {
+    background-color: #efceb8 !important;
+}
+
+.u-bg-light {
+    background-color: #fef9f8 !important;
+}
+
+.u-bg-dark {
+    background-color: #454644 !important;
+}
+
+.u-bg-white {
+    background-color: #ffffff !important;
+}
+
+.u-bg-black {
+    background-color: #000000 !important;
+}
+
+.u-text-bold {
+    font-weight: 700 !important;
+}
+
+/* Background colors */
 .u-color-primary {
     color: #61734b !important;
 }
@@ -104,10 +135,6 @@ a {
 
 .u-color-black {
     color: #000000 !important;
-}
-
-.u-text-bold {
-    font-weight: 700 !important;
 }
 
 /* Margins */
@@ -336,7 +363,7 @@ body [data-style-id="app"] {
 */
 /* 
 * Form
-* ----------
+* ----
 */
 /* Portal login + forgot-password form styles */
 #LoginNew .cCenterPanel {
@@ -491,9 +518,9 @@ body [data-style-id="app"] {
 }
 
 /* Portal reset password form styles */
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper {
     min-width: 30rem;
-    max-width: 45rem;
+    max-width: 44rem;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(69, 70, 68, 0.15);
     box-shadow: 0 1.5rem 4rem rgba(69, 70, 68, 0.15);
     padding: 3rem 5rem 5rem 5rem !important;
@@ -509,71 +536,106 @@ div[data-style-actor-name="resetPasswordActor"].actor-wrapper {
     transform: translate(-50%, -50%);
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] {
+    margin: 0 !important;
+    border: none;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    padding: 8.5rem .75rem 0 .75rem;
+    padding: 0 .75rem 0 .75rem !important;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view,
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .entries,
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-container {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"],
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .entries,
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-container {
     border: none !important;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view img {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .toolbar-at-top {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .toolbar-at-top+div {
+    overflow: visible !important;
+    padding-top: .5rem;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .toolbar-at-top .title-group {
+    margin: 0 !important;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .toolbar-at-top img {
     width: 30.662%;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .subtitle {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .toolbar-at-top .subtitle {
     width: 100%;
     top: 10rem;
+    margin: .5rem 0;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content {
-    margin-top: 11rem;
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .MuiToolbar-gutters {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content {
     margin-bottom: 1.5rem;
     padding: 0;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] div[data-style-id="field"] {
-    padding-right: 0 !important;
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] {
+    padding: 0 !important;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] {
+    padding: 0 !important;
     margin-bottom: 0 !important;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] div[data-style-id="field"] .field-content {
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root {
+    display: block;
+    margin-top: 0;
     margin-bottom: 2rem;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] div[data-style-id="field"] .flabel {
-    height: 2.6rem;
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-root {
+    display: block;
+    border: none;
+    outline: none;
+    margin-top: .3rem;
+    line-height: normal;
+    font-size: 1.6rem;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-root fieldset {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-root::before {
+    color: rgba(69, 70, 68, 0.75) !important;
     display: inline-block;
+    font-family: "Material Icons";
     position: absolute;
-    z-index: 1;
+    top: 50%;
     left: 1.7rem;
-    top: 1.55rem;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateY(-50%) scale(1.1);
+    -ms-transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.1);
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] div[data-style-id="field"] .flabel [data-style-id="field-label"] {
-    font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 37.5em) {
-    div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] div[data-style-id="field"] .flabel {
-        top: 1.02rem;
-    }
-}
-
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control {
-    font: 1.6rem/normal Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input {
+    font: 400 1.6rem/normal Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
     border: 0.1rem solid rgba(69, 70, 68, 0.2) !important;
     padding: 1.5rem !important;
     padding-left: 4rem !important;
     height: auto !important;
-    margin-top: .3rem !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
     min-height: calc(2.125rem + 2px);
@@ -586,37 +648,63 @@ div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .reco
 }
 
 @media only screen and (max-width: 37.5em) {
-    div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control {
+    div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input {
         font-size: 2rem;
     }
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control::-webkit-input-placeholder {
-    color: rgba(69, 70, 68, 0.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input::-webkit-input-placeholder {
+    color: rgba(69, 70, 68, 0.5) !important;
+    opacity: 1;
+    -webkit-transition: none;
+    transition: none;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control::-moz-placeholder {
-    color: rgba(69, 70, 68, 0.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input::-moz-placeholder {
+    color: rgba(69, 70, 68, 0.5) !important;
+    opacity: 1;
+    -moz-transition: none;
+    transition: none;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control:-ms-input-placeholder {
-    color: rgba(69, 70, 68, 0.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input:-ms-input-placeholder {
+    color: rgba(69, 70, 68, 0.5) !important;
+    opacity: 1;
+    -ms-transition: none;
+    transition: none;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control::-ms-input-placeholder {
-    color: rgba(69, 70, 68, 0.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input::-ms-input-placeholder {
+    color: rgba(69, 70, 68, 0.5) !important;
+    opacity: 1;
+    -ms-transition: none;
+    transition: none;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control::placeholder {
-    color: rgba(69, 70, 68, 0.5);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input::placeholder {
+    color: rgba(69, 70, 68, 0.5) !important;
+    opacity: 1;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control:hover,
-div[data-style-actor-name="resetPasswordActor"].actor-wrapper .detail-view .record-content div[data-style-section-name="resetPasswordSection"] .form-control:focus {
-    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.05);
-    box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.05);
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input:hover,
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input:focus,
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input:focus-visible,
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"] .MuiFormControl-root .MuiInputBase-input:focus-within {
+    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.05) !important;
+    box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.05) !important;
     border: 0.1rem solid #61734b !important;
-    outline: none !important;
+    outline: 0 !important;
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"]:nth-child(1) .MuiInputBase-root::before {
+    content: '\e897';
+}
+
+div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-style-id="detail-view"] .record-content div[data-style-section-name="growerResetPasswordFormSection"] div[data-style-id="field"]:nth-child(2) .MuiInputBase-root::before {
+    content: '\e92d';
 }
 
 /* 
@@ -649,137 +737,258 @@ div[id="cls_login_container"] button.sfdc_button:focus {
     box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2);
 }
 
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom {
-    margin-bottom: .5rem;
-    height: 5.5rem;
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom {
+    min-height: auto !important;
+    margin-bottom: 1rem;
 }
 
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom * {
-    width: 100%;
-    text-align: center;
-}
-
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom div[data-style-id="action-wrapper"] {
-    margin: 1.5rem 0 .5rem 0 !important;
-    display: inline !important;
-}
-
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom div[data-style-id="action-wrapper"] .action {
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom button[data-style-action-name="resetPassword"] {
     font: 500 2rem Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
     background-color: #61734b;
-    border-color: #4a5739;
+    border: 0.1rem solid #4a5739 !important;
     padding: 1.5rem;
     border-radius: .5rem;
     -webkit-transition: .2s linear box-shadow;
     -o-transition: .2s linear box-shadow;
     transition: .2s linear box-shadow;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    text-transform: capitalize;
 }
 
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom div[data-style-id="action-wrapper"] .action:hover,
-div[pageid="PortalResetPassword"] div[data-style-actor-name="resetPasswordActor"] .component-actions-bottom div[data-style-id="action-wrapper"] .action:focus {
-    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2);
-    box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2);
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom button[data-style-action-name="resetPassword"]:hover,
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom button[data-style-action-name="resetPassword"]:focus {
+    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2) !important;
+    box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2) !important;
+}
+
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom button[data-style-action-name="resetPassword"] .MuiButton-label>span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom button[data-style-action-name="resetPassword"] .MuiButton-label .material-icons {
+    font-size: inherit !important;
+    line-height: auto !important;
+    margin-right: .5rem;
 }
 
 /* 
-* Dropdown
-* --------
+* Statistics
+* ----------
 */
-[data-style-actor-name="authBtnActor"].actor-wrapper {
-    overflow: visible !important;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper,
-[data-style-actor-name="authBtnActor"].actor-wrapper .static-content {
-    height: 100%;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .static-content {
-    top: -1rem;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions {
-    position: relative;
-    top: -.5rem;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions a {
-    text-decoration: none;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .user {
-    color: #454644;
-    font-size: 1.6rem;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: auto;
-    bottom: auto;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .user.focus+.dropdown,
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .user.hover+.dropdown {
-    visibility: visible;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .dropdown {
-    visibility: hidden;
-    list-style: none;
-    margin-top: 1rem;
-    z-index: 2;
-    background-color: #ffffff;
-    position: relative;
-    top: 60px;
-    border: 1px solid rgba(69, 70, 68, 0.15);
-    -webkit-box-shadow: 0 0 1rem 0.3rem rgba(69, 70, 68, 0.1);
-    box-shadow: 0 0 1rem 0.3rem rgba(69, 70, 68, 0.1);
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .dropdown li a {
-    padding: 1rem 2rem;
-    display: block;
-    color: #454644;
-    font-size: 1.3rem;
-}
-
-[data-style-actor-name="authBtnActor"].actor-wrapper .user-actions .dropdown li:not(:last-child) {
-    border-bottom: 1px solid rgba(69, 70, 68, 0.15);
+div[data-style-actor-name="statisticsActor"].actor-wrapper {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
 }
 
 /* 
 * Header
 * ------
 */
-/* Header styles */
-div[pageid="PortalResetPassword"] div[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper {
+/* Header styles for reset password page */
+div[pageid="resetPasswordPortalNav"] div[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper {
     display: none;
 }
 
-[data-style-actor-name="ClsAppLayoutOneHeader"]>[data-style-actor-name="ClsAppLayoutOneHeader"] {
-    margin: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    position: relative !important;
-}
-
-[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper {
-    -webkit-box-shadow: 0 0 1rem 0.3rem rgba(69, 70, 68, 0.15);
-    box-shadow: 0 0 1rem 0.3rem rgba(69, 70, 68, 0.15);
+/* Header styles for dealer portal flow */
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] {
+    height: 80px !important;
     z-index: 1;
-    padding: 0 5rem !important;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0.2rem 1.5rem rgba(69, 70, 68, 0.08);
+    box-shadow: 0 0.2rem 1.5rem rgba(69, 70, 68, 0.08);
 }
 
-[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper [data-style-id="division"] {
-    overflow: visible !important;
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] * {
+    height: 100% !important;
 }
 
-[data-style-actor-name="ClsAppLayoutOneHeader"] .static-content {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] div[data-style-actor-name="headerActor"].actor-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top {
+    position: relative !important;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] {
+    margin: 0;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] {
+    height: 5rem !important;
+    margin-right: 4rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action {
+    background-color: #ac754b;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    border: 0.1rem solid #a87349;
+    font-weight: 700;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action i {
+    margin-right: .8rem;
+    font-size: 2rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action:hover,
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action:focus {
+    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(172, 117, 75, 0.2);
+    box-shadow: 0 0 0.3rem 0.4rem rgba(172, 117, 75, 0.2);
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action {
+    background-color: transparent;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action>i {
+    color: #61734b;
+    font-size: 3.5rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action .user-label {
+    height: auto !important;
+    margin-top: .2rem;
+    color: #61734b;
+    font-size: 1.5rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action .user-label i {
+    margin-left: .5rem;
+    font-size: 2rem;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: .2s linear all;
+    -o-transition: .2s linear all;
+    transition: .2s linear all;
+    font-family: "Roboto Condensed", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action * {
+    height: auto !important;
+}
+
+div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action.primary {
+    padding: 1.2rem 2.4rem;
+}
+
+/* 
+* Flex
+* ----
+*/
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex--row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex .align-self-start {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.flex .align-self-center {
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.flex .align-self-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.flex.justify-content-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.flex.justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex.justify-content-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.flex.align-items-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.flex.align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex.align-items-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 /* 
@@ -796,16 +1005,17 @@ div[pageid="PortalResetPassword"] div[data-style-actor-name="ClsAppLayoutOneHead
 * --------------
 */
 /* Portal reset-password page styles */
-div[pageid="PortalResetPassword"] div[data-style-actor-name="ClsAppLayoutOneMain"].actor-wrapper {
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayoutOneMain"].actor-wrapper {
     top: 0 !important;
 }
 
-div[pageid="PortalResetPassword"] div[data-style-actor-name="ClsAppLayoutOneContent"].actor-wrapper {
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayoutOneContent"].actor-wrapper {
     top: 0 !important;
     background: url("https://cfafs--rahuldev--c.visualforce.com/resource/dealerPortalBgImg") center/cover no-repeat !important;
+    /* Background styles alternate */
 }
 
-div[pageid="PortalResetPassword"] div[data-style-actor-name="ClsAppLayoutOneContent"]>div[data-style-actor-name="ClsAppLayoutOneContent"] {
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayoutOneContent"]>div[data-style-actor-name="ClsAppLayoutOneContent"] {
     margin: 0 !important;
     width: 100% !important;
     height: 100% !important;

@@ -85,10 +85,10 @@
 }
 
 /* Portal reset password form styles */
-div[data-style-actor-name="resetPasswordActor"] {
+div[data-style-actor-name="growerResetPasswordForm"] {
     &.actor-wrapper {
         min-width: 30rem;
-        max-width: 45rem;
+        max-width: 44rem;
         box-shadow: 0 1.5rem 4rem rgba($color: $color-dark, $alpha: .15);
         padding: 3rem 5rem 5rem 5rem !important;
         border-radius: .8rem;
@@ -101,9 +101,11 @@ div[data-style-actor-name="resetPasswordActor"] {
                                 $transform: translate(-50%, -50%)
                             );
 
-        .detail-view {
+        div[data-style-id="detail-view"] {
+            margin: 0 !important;
+            border: none;
             box-shadow: none !important;
-            padding: 8.5rem .75rem 0 .75rem;
+            padding: 0 .75rem 0 .75rem !important;
 
             &,
             .entries,
@@ -111,76 +113,128 @@ div[data-style-actor-name="resetPasswordActor"] {
                 border: none !important;
             }
 
-            img {
-                width: 30.662%;
+            .toolbar-at-top {
+                justify-content: center;
+
+                & + div {
+                    overflow: visible !important;
+                    padding-top: .5rem;
+                }
+
+                .title-group {
+                    margin: 0 !important;
+                }
+
+                img {
+                    width: 30.662%;
+                }
+    
+                .subtitle {
+                    width: 100%;
+                    top: 10rem;
+                    margin: .5rem 0;
+                }
             }
 
-            .subtitle {
-                width: 100%;
-                top: 10rem;
+            .MuiToolbar-gutters {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
             }
 
             .record-content {
-                margin-top: 11rem;
                 margin-bottom: 1.5rem;
                 padding: 0;
 
-                div[data-style-section-name="resetPasswordSection"] {
+                div[data-style-section-name="growerResetPasswordFormSection"] {
+                    padding: 0 !important;
 
                     div[data-style-id="field"] {
-                        padding-right: 0 !important;
+                        padding: 0 !important;
                         margin-bottom: 0 !important;
 
-                        .field-content {
+                        .MuiFormControl-root {
+                            display: block;
+                            margin-top: 0;
                             margin-bottom: 2rem;
-                        }
 
-                        .flabel {
-                            height: 2.6rem;
-                            transform: scale(1.5);
-                            display: inline-block;
-                            position: absolute;
-                            z-index: 1;
-                            left: 1.7rem;
-                            top: 1.55rem; 
-                            
-                            [data-style-id="field-label"] {
-                                font-size: 1.2rem;
+                            .MuiInputBase {
+
+                                &-root {
+                                    display: block;
+                                    border: none;
+                                    outline: none;
+                                    margin-top: .3rem;
+                                    line-height: normal;
+                                    font-size: 1.6rem;
+                                    
+                                    fieldset {
+                                        border: 0 !important;
+                                        outline: 0 !important;
+                                    }
+
+                                    &::before {
+                                        color: rgba($color: $color-dark, $alpha: .75) !important;
+                                        display: inline-block;
+                                        font-family: "Material Icons";
+
+                                        @include position-with-transform(
+                                                            $top: 50%,
+                                                            $left: 1.7rem,
+                                                            $transform: translateY(-50%) scale(1.1)
+                                                        )
+                                    }
+                                }
+
+                                &-input {
+                                    font: 400 #{$default-font-size}/normal #{$default-font-family} !important;
+                                    border: .1rem solid rgba($color: $color-dark, $alpha: .2) !important;
+                                    padding: 1.5rem !important;
+                                    padding-left: 4rem !important;
+                                    height: auto !important;
+                                    box-sizing: border-box;
+                                    box-shadow: none;
+                                    min-height: calc(2.125rem + 2px);
+                                    color: $color-primary;
+                                    border-radius: .5rem;
+                                    letter-spacing: .05rem;
+                                    transition: .2s linear all;
+
+                                    @include respond-to(sm-device) {
+                                        font-size: 2rem;
+                                    }
+
+                                    &::placeholder {
+                                        color: rgba($color: $color-dark, $alpha: .5) !important;
+                                        opacity: 1;
+                                        transition: none;
+                                    }
+
+                                    &:hover,
+                                    &:focus,
+                                    &:focus-visible,
+                                    &:focus-within {
+                                        box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .05) !important;
+                                        border: .1rem solid #{$color-primary} !important;
+                                        outline: 0 !important;
+                                    }
+                                }
                             }
+                        }
 
-                            @include respond-to(sm-device) {
-                                top: 1.02rem;
+                        &:nth-child(1) {
+                            .MuiInputBase-root {
+                                &::before {
+                                    content: '\e897';
+                                }
                             }
                         }
-                    }
 
-                    .form-control {
-                        font: #{$default-font-size}/normal #{$default-font-family} !important;
-                        border: .1rem solid rgba($color: $color-dark, $alpha: .2) !important;
-                        padding: 1.5rem !important;
-                        padding-left: 4rem !important;
-                        height: auto !important;
-                        margin-top: .3rem !important;
-                        box-shadow: none;
-                        min-height: calc(2.125rem + 2px);
-                        color: $color-primary;
-                        border-radius: .5rem;
-                        letter-spacing: .05rem;
-                        transition: .2s linear all;
-
-                        @include respond-to(sm-device) {
-                            font-size: 2rem;
-                        }
-        
-                        &::placeholder {
-                            color: rgba($color: $color-dark, $alpha: .5);
-                        }
-        
-                        &:hover,
-                        &:focus {
-                            box-shadow: 0 0 .3rem .4rem rgba($color: $color-primary, $alpha: .05);
-                            border: .1rem solid #{$color-primary} !important;
-                            outline: none !important;
+                        &:nth-child(2) {
+                            .MuiInputBase-root {
+                                &::before {
+                                    content: '\e92d';
+                                }
+                            }
                         }
                     }
                 }

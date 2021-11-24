@@ -2,6 +2,40 @@
     text-align: center !important;
 }
 
+/* Text colors */
+.u-bg-primary {
+    background-color: $color-primary !important;
+}
+
+.u-bg-secondary {
+    background-color: $color-secondary !important;
+}
+
+.u-bg-tertiary {
+    background-color: $color-tertiary !important;
+}
+
+.u-bg-light {
+    background-color: $color-light !important;
+}
+
+.u-bg-dark {
+    background-color: $color-dark !important;
+}
+
+.u-bg-white {
+    background-color: $color-white !important;
+}
+
+.u-bg-black {
+    background-color: $color-black !important;
+}
+
+.u-text-bold {
+    font-weight: 700 !important;
+}
+
+/* Background colors */
 .u-color-primary {
     color: $color-primary !important;
 }
@@ -28,10 +62,6 @@
 
 .u-color-black {
     color: $color-black !important;
-}
-
-.u-text-bold {
-    font-weight: 700 !important;
 }
 
 /* Margins */
