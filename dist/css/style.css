@@ -62,6 +62,10 @@ a {
     text-decoration: none;
 }
 
+[data-style-id="app"]:not([data-client="phone"]) [data-style-id="static-content"] {
+    padding: .6rem 1.2rem !important;
+}
+
 .salesforceIdentityLoginBody2 .ui-widget {
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -325,7 +329,7 @@ a {
 */
 body,
 body [data-style-id="app"] {
-    font: 400 1.6rem/1.6 Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 400 1.6rem/normal Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #454644;
 }
 
@@ -337,6 +341,11 @@ body [data-style-id="app"] {
 
 .heading-secondary {
     font-size: 2.4rem !important;
+}
+
+.heading-tertiary {
+    font-size: 2rem !important;
+    line-height: 2.2rem !important;
 }
 
 .heading--underline-center::after {
@@ -355,6 +364,22 @@ body [data-style-id="app"] {
     font-size: 1.6rem;
     display: block;
     text-decoration: none !important;
+}
+
+/* Toast message styles */
+.MuiSnackbarContent-message {
+    padding: .6rem 1.6rem;
+}
+
+.MuiSnackbarContent-message .global-message .message-content {
+    font: 700 1.8rem Roboto Condensed, Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    letter-spacing: .05rem;
+}
+
+/* Helper text styles */
+.MuiFormHelperText-contained {
+    font: 500 1.4rem "Roboto Condensed", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    margin: .6rem 0 0 0 !important;
 }
 
 /* 
@@ -711,6 +736,7 @@ div[data-style-actor-name="growerResetPasswordForm"].actor-wrapper div[data-styl
 * Button
 * ------
 */
+/* Login + forgot-password form submit button styles */
 div[id="cls_self_register_container"] button.sfdc_button,
 div[id="cls_forgotpassword_container"] button.sfdc_button,
 div[id="cls_resetpassword_container"] button.sfdc_button,
@@ -737,6 +763,7 @@ div[id="cls_login_container"] button.sfdc_button:focus {
     box-shadow: 0 0 0.3rem 0.4rem rgba(97, 115, 75, 0.2);
 }
 
+/* Reset password form submit button styles */
 div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerResetPasswordForm"] .toolbar-at-bottom {
     min-height: auto !important;
     margin-bottom: 1rem;
@@ -778,6 +805,7 @@ div[pageid="portal_grower_reset_password"] div[data-style-actor-name="growerRese
     margin-right: .5rem;
 }
 
+/* Grower dashboard header button styles */
 /* 
 * Statistics
 * ----------
@@ -792,12 +820,12 @@ div[data-style-actor-name="statisticsActor"].actor-wrapper {
 * ------
 */
 /* Header styles for reset password page */
-div[pageid="resetPasswordPortalNav"] div[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper {
+div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayoutOneHeader"].actor-wrapper {
     display: none;
 }
 
 /* Header styles for dealer portal flow */
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] {
+div[pageid="portal_grower"] [data-style-actor-name="ClsAppLayoutOneHeader"] {
     height: 80px !important;
     z-index: 1;
     background-color: #ffffff;
@@ -805,115 +833,29 @@ div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] {
     box-shadow: 0 0.2rem 1.5rem rgba(69, 70, 68, 0.08);
 }
 
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] * {
+div[pageid="portal_grower"] [data-style-actor-name="ClsAppLayoutOneHeader"] * {
     height: 100% !important;
 }
 
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] div[data-style-actor-name="headerActor"].actor-wrapper {
+div[pageid="portal_grower"] [data-style-actor-name="ClsAppLayoutOneHeader"] div[data-style-actor-name="growerHeader"].actor-wrapper {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content {
+div[pageid="portal_grower"] [data-style-actor-name="ClsAppLayoutOneHeader"] div[data-style-actor-name="growerHeader"] div[data-style-id="static-content"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top {
-    position: relative !important;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right {
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] {
-    margin: 0;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] {
-    height: 5rem !important;
-    margin-right: 4rem;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action {
-    background-color: #ac754b;
-    border-radius: 5rem;
-    font-size: 1.7rem;
-    border: 0.1rem solid #a87349;
-    font-weight: 700;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action i {
-    margin-right: .8rem;
-    font-size: 2rem;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action:hover,
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="initiateApplication"] .action:focus {
-    -webkit-box-shadow: 0 0 0.3rem 0.4rem rgba(172, 117, 75, 0.2);
-    box-shadow: 0 0 0.3rem 0.4rem rgba(172, 117, 75, 0.2);
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action {
-    background-color: transparent;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action>i {
-    color: #61734b;
-    font-size: 3.5rem;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action .user-label {
-    height: auto !important;
-    margin-top: .2rem;
-    color: #61734b;
-    font-size: 1.5rem;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"][data-style-action-name="dropdown"] .action .user-label i {
-    margin-left: .5rem;
-    font-size: 2rem;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transition: .2s linear all;
-    -o-transition: .2s linear all;
-    transition: .2s linear all;
-    font-family: "Roboto Condensed", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action * {
-    height: auto !important;
-}
-
-div[pageid="dealerPortalNav"] [data-style-actor-name="ClsAppLayoutOneHeader"] .static-content .component-actions-top-right [data-style-id="action-wrapper"] .action.primary {
-    padding: 1.2rem 2.4rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
 }
 
 /* 
@@ -1011,7 +953,7 @@ div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayo
 
 div[pageid="portal_grower_reset_password"] div[data-style-actor-name="ClsAppLayoutOneContent"].actor-wrapper {
     top: 0 !important;
-    background: url("https://cfafs--rahuldev--c.visualforce.com/resource/dealerPortalBgImg") center/cover no-repeat !important;
+    background: url("https://rahuldev-cooperative-finance.cs61.force.com/resource/dealerPortalBgImg") center/cover no-repeat !important;
     /* Background styles alternate */
 }
 

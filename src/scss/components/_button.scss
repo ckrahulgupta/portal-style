@@ -1,3 +1,4 @@
+/* Login + forgot-password form submit button styles */
 div[id="cls_self_register_container"],
 div[id="cls_forgotpassword_container"],
 div[id="cls_resetpassword_container"],
@@ -18,6 +19,7 @@ div[id="cls_login_container"] {
     }
 }
 
+/* Reset password form submit button styles */
 div[pageid="portal_grower_reset_password"] {
     div[data-style-actor-name="growerResetPasswordForm"] {
 
@@ -57,3 +59,5 @@ div[pageid="portal_grower_reset_password"] {
         }
     }
 }
+
+/* Grower dashboard header button styles */

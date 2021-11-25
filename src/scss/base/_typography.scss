@@ -1,6 +1,6 @@
 body, 
 body [data-style-id="app"] {
-    font: 400 #{$default-font-size}/1.6 #{$default-font-family};
+    font: 400 #{$default-font-size}/normal #{$default-font-family};
     color: $default-font-color;
 }
 
@@ -11,6 +11,11 @@ body [data-style-id="app"] {
 
     &-secondary {
         font-size: 2.4rem !important;
+    }
+
+    &-tertiary {
+        font-size: 2rem !important;
+        line-height: 2.2rem !important;
     }
 
     &--underline-center::after {
@@ -33,3 +38,24 @@ body [data-style-id="app"] {
         text-decoration: none !important;
     }
 }   
+
+/* Toast message styles */
+.MuiSnackbarContent-message {
+    padding: .6rem 1.6rem;
+
+    .global-message {
+        .message-content {
+            font: 700 1.8rem #{$default-font-family} !important;
+            letter-spacing: .05rem;
+        }
+    }
+}
+
+/* Helper text styles */
+.MuiFormHelperText {
+    &-contained {
+        font: 500 1.4rem $default-font-family !important;
+        margin: .6rem 0 0 0 !important;
+    }
+}
+

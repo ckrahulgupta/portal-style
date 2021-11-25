@@ -66,6 +66,14 @@ a {
     text-decoration: none;
 }
 
+[data-style-id="app"] {
+    &:not([data-client="phone"]) {
+        [data-style-id="static-content"] {
+            padding: .6rem 1.2rem !important;
+        }
+    }
+}
+
 .salesforceIdentityLoginBody2 {
     .ui-widget {
         padding-top: .5rem;
